@@ -20,7 +20,12 @@ ORDER BY(title) ASC
 end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
-"Write your SQL query Here"
+  "SELECT title, SUM(pledges.amount) FROM projects
+  INNER JOIN pledges
+  ON pledges.project_id = projects.id
+  GROUP BY pledges.project_id
+  ORDER BY(title) ASC
+  "
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
