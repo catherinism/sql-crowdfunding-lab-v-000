@@ -47,7 +47,7 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
   #find users' names
   #find sum of users' pledges
   #return users' names and pledges, desc order by amount
-  "SELECT title, SUM(amount)-funding_goal FROM projects
+  "SELECT name, SUM(amount)-funding_goal FROM projects
   INNER JOIN pledges
   ON pledges.project_id = projects.id
   GROUP BY pledges.project_id
