@@ -36,7 +36,7 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
   INNER JOIN pledges
   ON pledges.project_id = projects.id
   GROUP BY pledges.project_id
-  LIMIT 2
+  ORDER BY ASC LIMIT 2
   "
 end
 
