@@ -46,7 +46,7 @@ end
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
   #find users' names
   #find sum of users' pledges
-  #return users' names and pledges, asc order by amount
+  #return users' names and pledges, asc order by amount and users' name
   "SELECT name, SUM(amount) FROM users
   INNER JOIN pledges
   ON pledges.user_id = users.id
