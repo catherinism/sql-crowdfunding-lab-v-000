@@ -58,7 +58,7 @@ end
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
   #find music category
   #find pledge amount
-  #return each music category and pledge amount 
+  #return each music category and pledge amount
   "SELECT category, amount FROM projects
   INNER JOIN pledges
   ON pledges.project_id = projects.id
@@ -69,10 +69,10 @@ end
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
   #find books category
   #find total of pledge amount for books
-  #return books category and total amount 
+  #return books category and total amount
   "SELECT category, SUM(amount) FROM projects
   INNER JOIN pledges
   ON pledges.project_id = projects.id
-  WHERE category = 'music'
+  WHERE category = 'books'
   "
 end
