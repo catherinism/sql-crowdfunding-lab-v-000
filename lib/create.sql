@@ -3,7 +3,7 @@
 CREATE TABLE users (
     id INTEGER PRIMARY KEY,
     title TEXT,
-    age INTEGER,
+    age INTEGER
 );
 
 CREATE TABLE pledges (
