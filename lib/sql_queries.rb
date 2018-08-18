@@ -11,7 +11,7 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
   #find all pledge amount with project_id
   #add amount of pledges for each project
   #return both title and amount of all projects in alphabetical order
-"SELECT SUM(pledges.amount), title FROM projects
+"SELECT title FROM projects, SUM(pledges.amount)
 INNER JOIN pledges
 ON pledges.project_id = projects.id
 GROUP BY pledges.amount
