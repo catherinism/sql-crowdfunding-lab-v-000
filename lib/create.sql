@@ -9,7 +9,7 @@ CREATE TABLE projects
 
 CREATE TABLE users (
     id INTEGER PRIMARY KEY,
-    title TEXT,
+    name TEXT,
     age INTEGER
 );
 
