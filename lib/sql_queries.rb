@@ -48,7 +48,7 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
   #find sum of users' pledges
   #return users' names and pledges, asc order by amount
   "SELECT name, SUM(amount) FROM users
-  JOIN pledges
+  LEFT JOIN pledges
   ON pledges.user_id = users.id
   GROUP BY pledges.user_id
   ORDER BY(amount) ASC
