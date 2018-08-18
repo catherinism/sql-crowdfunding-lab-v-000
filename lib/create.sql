@@ -1,6 +1,6 @@
 CREATE TABLE projects (
     id INTEGER PRIMARY KEY,
-    name TEXT,
+    title TEXT,
     age INTEGER,
     breed TEXT
 );
