@@ -23,9 +23,9 @@ def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_
   #find the user's name and age
   #find total amount of pledges by each user
   #return user's name, age, and total pedge, alphabetical(user's name)
-  "SELECT title, SUM(pledges.amount) FROM projects
+  "SELECT name, SUM(pledges.amount) FROM users
   INNER JOIN pledges
-  ON pledges.project_id = projects.id
+  ON pledges.user_id = users.id
   GROUP BY pledges.project_id
   ORDER BY(title) ASC
   "
